@@ -1,0 +1,28 @@
+plugin:
+    name: 'indev.frontendformbuilder::lang.plugin.name'
+    description: 'indev.frontendformbuilder::lang.plugin.description'
+    author: Indev
+    icon: oc-icon-weixin
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Form Builder'
+        url: indev/frontendformbuilder/formbuildercontroller
+        icon: icon-magic
+        sideMenu:
+            side-menu-item:
+                label: Form
+                url: indev/frontendformbuilder/advanceformcontroller
+                icon: icon-dedent
+            side-menu-item2:
+                label: Tabs
+                url: indev/frontendformbuilder/tabscontroller
+                icon: icon-navicon
+            side-menu-item3:
+                label: Fields
+                url: indev/frontendformbuilder/fieldscontroller
+                icon: icon-plus
+            side-menu-item4:
+                label: 'Basic Form'
+                url: indev/frontendformbuilder/formbuildercontroller
+                icon: icon-magic

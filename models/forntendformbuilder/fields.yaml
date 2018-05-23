@@ -1,0 +1,85 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    tabs:
+        label: Tabs
+        prompt: 'Add new item'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                tabname:
+                    label: Name
+                    span: auto
+                    type: text
+                tablabel:
+                    label: Label
+                    span: auto
+                    type: text
+                position:
+                    label: Position
+                    span: auto
+                    type: text
+tabs:
+    fields:
+        fields:
+            label: Fields
+            prompt: 'Add new item'
+            span: full
+            type: repeater
+            tab: Fields
+            form:
+                fields:
+                    namefield:
+                        label: name
+                        span: auto
+                        type: text
+                    label:
+                        label: Label
+                        span: auto
+                        type: text
+                    type:
+                        label: Type
+                        options:
+                            text: text
+                            password: password
+                            select: select
+                            checkbox: checkbox
+                            radio: radio
+                            date: date
+                            datetime-local: datetime-local
+                            file: file
+                            hidden: hidden
+                            range: range
+                        span: auto
+                        type: dropdown
+                    track:
+                        label: data-track-input
+                        span: auto
+                        type: text
+                    classe:
+                        label: Class
+                        span: auto
+                        type: text
+                    tabname:
+                        label: Tab
+                        span: auto
+                        type: text
+                    options:
+                        label: Options
+                        prompt: 'Add new item'
+                        span: auto
+                        type: repeater
+                        form:
+                            fields:
+                                options:
+                                    label: Options
+                                    prompt: 'Add new item'
+                                    span: auto
+                                    type: text
+                                opValue:
+                                    label: Value
+                                    span: auto
+                                    type: text

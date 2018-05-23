@@ -1,0 +1,4 @@
+title: FieldsController
+modelClass: Indev\FrontEndFormBuilder\Models\Fields
+toolbar:
+    buttons: reorder_toolbar

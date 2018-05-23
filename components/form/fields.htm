@@ -1,0 +1,9 @@
+
+{% for field in fields %}
+
+  <div class="form-group">
+        <label for="exampleInputEmail1">{{ field.label }}</label>
+        <input type="{{ field.type }}" class="form-control" id="{{ field.name }}" aria-describedby="emailHelp" name="{{ field.name }}"/>
+    </div>
+ 
+{% endfor %}

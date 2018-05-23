@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    position:
+        label: position
+        type: number
+    formadvance_id:
+        label: form
+        type: number
+    label:
+        label: label
+        type: text

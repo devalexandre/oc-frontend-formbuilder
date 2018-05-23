@@ -1,0 +1,10 @@
+name: AdvanceFormController
+form: $/indev/frontendformbuilder/models/formadvance/fields.yaml
+modelClass: Indev\FrontEndFormBuilder\Models\FormAdvance
+defaultRedirect: indev/frontendformbuilder/advanceformcontroller
+create:
+    redirect: 'indev/frontendformbuilder/advanceformcontroller/update/:id'
+    redirectClose: indev/frontendformbuilder/advanceformcontroller
+update:
+    redirect: indev/frontendformbuilder/advanceformcontroller
+    redirectClose: indev/frontendformbuilder/advanceformcontroller

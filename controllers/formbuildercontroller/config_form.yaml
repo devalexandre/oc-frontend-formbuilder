@@ -1,0 +1,10 @@
+name: FormbuilderController
+form: $/indev/frontendformbuilder/models/forntendformbuilder/fields.yaml
+modelClass: Indev\FrontEndFormBuilder\Models\ForntendFormBuilder
+defaultRedirect: indev/frontendformbuilder/formbuildercontroller
+create:
+    redirect: 'indev/frontendformbuilder/formbuildercontroller/update/:id'
+    redirectClose: indev/frontendformbuilder/formbuildercontroller
+update:
+    redirect: indev/frontendformbuilder/formbuildercontroller
+    redirectClose: indev/frontendformbuilder/formbuildercontroller

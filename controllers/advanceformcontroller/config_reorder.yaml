@@ -1,0 +1,4 @@
+title: AdvanceFormController
+modelClass: Indev\FrontEndFormBuilder\Models\FormAdvance
+toolbar:
+    buttons: reorder_toolbar

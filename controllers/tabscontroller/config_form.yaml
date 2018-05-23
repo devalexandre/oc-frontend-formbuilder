@@ -1,0 +1,10 @@
+name: TabsController
+form: $/indev/frontendformbuilder/models/tabs/fields.yaml
+modelClass: Indev\FrontEndFormBuilder\Models\Tabs
+defaultRedirect: indev/frontendformbuilder/tabscontroller
+create:
+    redirect: 'indev/frontendformbuilder/tabscontroller/update/:id'
+    redirectClose: indev/frontendformbuilder/tabscontroller
+update:
+    redirect: indev/frontendformbuilder/tabscontroller
+    redirectClose: indev/frontendformbuilder/tabscontroller

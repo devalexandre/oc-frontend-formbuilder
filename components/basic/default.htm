@@ -1,0 +1,21 @@
+{% set active  = '' %}
+<form>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            
+            {% for tab in __SELF__.tabs  %}     
+                <li class="nav-item">
+                        {% if tab.position ==  1 %}
+                  <a class="nav-link active" id="{{tab.tabname}}-tab" data-toggle="tab" href="#{{tab.tabname}}" role="tab" aria-controls="{{tab.tabname}}" aria-selected="true">{{tab.tablabel}}</a>
+                  {% else %}
+                  <a class="nav-link " id="{{tab.tabname}}-tab" data-toggle="tab" href="#{{tab.tabname}}" role="tab" aria-controls="{{tab.tabname}}" aria-selected="true">{{tab.tablabel}}</a>
+                
+                  {% endif %}
+                </li>
+            {% endfor %}
+              </ul>
+
+
+   {% partial '@tabs' tabs=__SELF__.tabs fields=__SELF__.fields %}
+
+ </form>
+

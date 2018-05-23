@@ -1,0 +1,26 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    label:
+        label: label
+        type: text
+    type:
+        label: type
+        type: text
+    track:
+        label: track
+        type: text
+    classe:
+        label: classe
+        type: text
+    options:
+        label: options
+        type: partial
+        path: fields
+    tabs_id:
+        label: tabs_id
+        type: number

@@ -1,0 +1,56 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    type:
+        label: Dropdown
+        options:
+            text: text
+            select: select
+            checkbox: checkbox
+            radio: radio
+            date: date
+            email: email
+            tel: tel
+            password: password
+            color: color
+            datetime-loca: datetime-loca
+        span: auto
+        type: dropdown
+    label:
+        label: Label
+        span: auto
+        type: text
+    classe:
+        label: Class
+        span: auto
+        type: text
+    track:
+        label: request-input-track
+        span: auto
+        type: text
+    tabs:
+        label: Tab
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+tabs:
+    fields:
+        options:
+            label: Options
+            prompt: 'Add new item'
+            span: auto
+            type: repeater
+            tab: Options
+            form:
+                fields:
+                    opname:
+                        label: name
+                        span: auto
+                        type: text
+                    opvalue:
+                        label: Value
+                        span: auto
+                        type: text

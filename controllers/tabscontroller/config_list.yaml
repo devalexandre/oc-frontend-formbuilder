@@ -1,0 +1,12 @@
+list: $/indev/frontendformbuilder/models/tabs/columns.yaml
+modelClass: Indev\FrontEndFormBuilder\Models\Tabs
+title: TabsController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'indev/frontendformbuilder/tabscontroller/update/:id'

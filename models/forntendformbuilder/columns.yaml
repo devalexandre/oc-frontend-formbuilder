@@ -1,0 +1,11 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    fields:
+        label: fields
+        type: partial
+        path: fields

@@ -1,0 +1,19 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    position:
+        label: Position
+        span: auto
+        type: number
+    formadvance:
+        label: Form
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    label:
+        label: Title
+        span: auto
+        type: text

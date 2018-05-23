@@ -1,0 +1,13 @@
+<div class="tab-content" id="myTabContent">
+        {% for tab in tabs  %}   
+        {% if tab.position ==  1 %}
+        <div class="tab-pane fade show active" id="{{tab.name}}" role="tabpanel" aria-labelledby="{{tab.name}}">
+            {% partial '@fields' fields=tab.fields %}
+        </div>
+       {% else %}
+       <div class="tab-pane fade" id="{{tab.name}}" role="tabpanel" aria-labelledby="{{tab.name}}">
+            {% partial '@fields' fields=tab.fields  %}
+        </div>
+      {% endif %}
+       {% endfor %}
+      </div>
