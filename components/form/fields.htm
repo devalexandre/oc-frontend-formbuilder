@@ -1,9 +1,25 @@
 
-{% for field in fields %}
-
-  <div class="form-group">
-        <label for="exampleInputEmail1">{{ field.label }}</label>
-        <input type="{{ field.type }}" class="form-control" id="{{ field.name }}" aria-describedby="emailHelp" name="{{ field.name }}"/>
-    </div>
- 
-{% endfor %}
+<div class="form-row">
+        {% for field in fields %}
+        
+            {% if field.options is not empty %}
+        
+            <div class="form-group {% if field.classe %} {{ field.classe }} {% else %} col-md-12 {% endif %}">
+                    <label >{{ field.label }}</label>
+                    <select class="form-control" id="inputGroupSelect01">
+                    <option selected >Choose...</option>
+                    {% for options in field.options %}
+                    <option value="{{ options.opvalue }}">{{ options.opname }}</option>
+                    {% endfor %}
+                    </select>
+                
+            </div>
+            {% else %}
+            <div class="form-group {% if field.classe %} {{ field.classe }} {% else %} col-md-12 {% endif %}">
+                    <label >{{ field.label }}</label>
+                    <input data-request-track="{{ field.track }}" type="{{ field.type }}" class="form-control" id="{{ field.name }}" aria-describedby="emailHelp" name="{{ field.name }}"/>
+                
+          </div>
+            {% endif %}
+        {% endfor %}
+         </div>

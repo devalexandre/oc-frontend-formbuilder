@@ -13,7 +13,7 @@ class Basic extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Form Component',
+            'name'        => 'Form Basic Component',
             'description' => 'No description provided yet...'
         ];
     }

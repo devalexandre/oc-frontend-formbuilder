@@ -12,7 +12,7 @@ class Form extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Form Component',
+            'name'        => 'Form Advance Component',
             'description' => 'No description provided yet...'
         ];
     }
