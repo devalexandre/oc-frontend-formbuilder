@@ -1,4 +1,4 @@
-``` .html
+```
 <table>
 <thead>
 <tr>
@@ -65,5 +65,4 @@
 </tr>
 </tbody>
 </table>
-
 ```
