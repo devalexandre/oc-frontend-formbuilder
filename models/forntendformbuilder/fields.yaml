@@ -55,6 +55,10 @@ tabs:
                             range: range
                         span: auto
                         type: dropdown
+                    value:
+                        label: Value
+                        span: auto
+                        type: text
                     track:
                         label: data-track-input
                         span: auto

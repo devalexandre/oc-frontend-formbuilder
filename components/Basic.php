@@ -3,6 +3,7 @@
 use Cms\Classes\ComponentBase;
 
 use Indev\FrontEndformbuilder\Models\ForntendFormBuilder as FormBuilder;
+use Indev\FrontEndFormBuilder\Models\ForntendFormBuilder;
 
 class Basic extends ComponentBase
 {
@@ -25,7 +26,7 @@ class Basic extends ComponentBase
                 'title'       => 'Name',
                 'description' => 'form name',
                 'default'     => '',
-                'type'        => 'string'
+                'type'        => 'dropdown'
             ],
             'data_request' => [
                 'title'       => 'data-request',
@@ -85,22 +86,43 @@ class Basic extends ComponentBase
                 'title'       => 'data-request-files',
                 'description' => 'when specified the request will accept file uploads,',
                 'default'     => '',
-                'type'        => 'string'
+                'type'        => 'checkbox'
+            ],
+            'data_request_flash' => [
+                'title'       => 'data-request-flash',
+                'description' => 'display message flash',
+                'default'     => '',
+                'type'        => 'checkbox'
             ],
         ];
+    }
+
+    public function getNameOptions()
+    {
+        $options = [];
+
+        $dados = ForntendFormBuilder::get();
+        foreach($dados as $d){
+            $options[$d->id] = $d->name;
+        }
+        return $options;
     }
 
     public function getProperty($propertyName) { return $this->property($propertyName); }
 
     public function onRun()
       {
-        $this->fields = FormBuilder::pluck('fields');
-        $this->tabs =  FormBuilder::pluck('tabs');
+        
 
-        $this->fields =  json_decode($this->fields[0],true);
-        $this->tabs =  array_sort(json_decode($this->tabs[0],true),'position',SORT_ASC);
+          $form = FormBuilder::where('name','=',$this->property('name'))->first();
 
+          if($form){
+        $this->fields = $form->fields;
+        $this->tabs =  $form->tabs;
+
+        $this->fields = $form->fields;
+        $this->tabs =  array_sort($this->tabs,'position',SORT_ASC);
+          }
    
-
     }
 }

@@ -22,6 +22,10 @@ fields:
         label: Label
         span: auto
         type: text
+    value:
+        label: Value
+        span: auto
+        type: text
     classe:
         label: Class
         span: auto

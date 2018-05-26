@@ -7,6 +7,9 @@ class FormbuilderController extends Controller
 {
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
     
+    public $requiredPermissions = ['Basic Form'];
+
+
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';
 

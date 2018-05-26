@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Indev\FrontEndformbuilder\Models\FormAdvance as FormBuilder;
+use Indev\FrontEndFormBuilder\Models\FormAdvance;
 
 class Form extends ComponentBase
 {
@@ -24,7 +25,7 @@ class Form extends ComponentBase
                 'title'       => 'Name',
                 'description' => 'form name',
                 'default'     => '',
-                'type'        => 'string'
+                'type'        => 'dropdown'
             ],
             'data_request' => [
                 'title'       => 'data-request',
@@ -84,9 +85,20 @@ class Form extends ComponentBase
                 'title'       => 'data-request-files',
                 'description' => 'when specified the request will accept file uploads,',
                 'default'     => '',
-                'type'        => 'string'
+                'type'        => 'checkbox'
+            ],
+            'data_request_flash' => [
+                'title'       => 'data-request-flash',
+                'description' => 'display message flash',
+                'default'     => '',
+                'type'        => 'checkbox'
             ],
         ];
+    }
+
+    public function getNameOptions()
+    {
+        return FormAdvance::pluck('name');
     }
 
     public function getProperty($propertyName) { return $this->property($propertyName); }
@@ -95,15 +107,14 @@ class Form extends ComponentBase
       {
           $forms = FormBuilder::where('name','=',$this->property('name'))
           ->with('tabs')
-          ->get();
+          ->first();
 
-         
-        
-          $this->tabs =  $forms[0]->tabs;
+        $this->tabs =  $forms->tabs;
        
         $this->tabs =  array_sort($this->tabs,'position',SORT_ASC);
 
-   
+     
+      
 
     }
 }

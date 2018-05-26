@@ -17,7 +17,11 @@
             {% else %}
             <div class="form-group {% if field.classe %} {{ field.classe }} {% else %} col-md-12 {% endif %}">
                     <label >{{ field.label }}</label>
-                    <input data-request-track="{{ field.track }}" type="{{ field.type }}" class="form-control" id="{{ field.name }}" aria-describedby="emailHelp" name="{{ field.name }}"/>
+                    <input 
+                    {% if field.track %}data-request-track="{{ field.track }}" {% endif %} 
+                    {% if field.type == 'file' %} accept="image/*" {% endif %}
+                    type="{{ field.type }}" class="form-control" id="{{ field.name }}" 
+                    aria-describedby="emailHelp" name="{{ field.name }}"/>
                 
           </div>
             {% endif %}

@@ -7,7 +7,7 @@ plugin:
 navigation:
     main-menu-item:
         label: 'Form Builder'
-        url: indev/frontendformbuilder/formbuildercontroller
+        url: indev/frontendformbuilder/advanceformcontroller
         icon: icon-magic
         sideMenu:
             side-menu-item:
@@ -26,3 +26,16 @@ navigation:
                 label: 'Basic Form'
                 url: indev/frontendformbuilder/formbuildercontroller
                 icon: icon-magic
+permissions:
+    FormAdvance:
+        tab: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.formadvance'
+        label: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.formadvance'
+    Tabs:
+        tab: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.tabs'
+        label: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.tabs'
+    'Basic Form':
+        tab: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.basic'
+        label: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.basic'
+    Fields:
+        tab: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.fields'
+        label: 'indev.frontendformbuilder::lang.plugin.frontendbuilder.fields'

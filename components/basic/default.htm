@@ -1,5 +1,9 @@
 {% set active  = '' %}
-<form>
+<form {% partial '@data'%}>
+
+    {{ form_token() }}
+    {{ form_sessionKey() }}
+    
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             
             {% for tab in __SELF__.tabs  %}     
@@ -16,6 +20,6 @@
 
 
    {% partial '@tabs' tabs=__SELF__.tabs fields=__SELF__.fields %}
-
+   <button class="btn btn-primary" type="submit" data-request-load>send</button>
  </form>
 
