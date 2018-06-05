@@ -1,7 +1,7 @@
 <?php return [
     'plugin' => [
         'name' => 'Front-end Form Builder',
-        'description' => '',
+        'description' => 'with frontend plugin you do fast and easy forms',
         'frontendbuilder' => [
             'formadvance' => 'FormAdvance',
             'FormAdvance' => 'FormAdvance',
